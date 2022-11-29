@@ -1,0 +1,23 @@
+<html>
+<body>
+   <h2> Write a JavaScript program to convert the letters of a given string in alphabetical order. </h2>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+
+function alphabetical_order(str) { 
+
+  return str.split("").sort().join("");
+         
+}
+const string = prompt('Enter a string: ');
+
+const result = alphabetical_order(string);
+ output.innerHTML = result;
+
+
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+   <h2>Write a JavaScript program to create a new string of specified copies (positive number) of a 
+given string
+ </h2>
+
+ <div id="output"></div>
+   <script>
+  function stringcopies (str, n) 
+{
+  if (n < 0)
+    return false;
+  else
+  return str.repeat(n);
+}
+const string = prompt('Enter a String: ');
+const number = prompt('Enter a number: ');
+
+const result = stringcopies(string,number);
+  output.innerHTML = result;
+   
+   </script>
+</body>
+</html>

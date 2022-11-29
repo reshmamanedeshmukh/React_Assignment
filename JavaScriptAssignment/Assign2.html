@@ -1,0 +1,44 @@
+<html>
+<body>
+   <h2> Write a JavaScript program to replace every character in a given string with the character 
+following it in the alphabet.  </h2>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+function ReplaceCharacter(text) {
+
+var s = text.split('');
+for (var i = 0; i < s.length; i++) {
+// Caesar cipher
+switch(s[i]) {
+case ' ':
+break;
+case 'z':
+s[i] = 'a';
+break;
+case 'Z': 
+s[i] = 'A';
+break;
+default:
+s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+}
+
+// Upper-case vowels
+switch(s[i]) {
+case 'a': case 'e': case 'i': case 'o': case 'u':
+s[i] = s[i].toUpperCase();
+}
+}
+return s.join('');
+}
+
+
+const string = prompt('Enter a string: ');
+
+const result = ReplaceCharacter(string);
+  output.innerHTML = result;
+   
+   </script>
+</body>
+</html>

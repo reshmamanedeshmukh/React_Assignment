@@ -1,0 +1,23 @@
+<html>
+<body>
+   <h2> Write a JavaScript program to capitalize the first letter of each word of a given string.  </h2>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+function converttime(num)
+ { 
+  var hours = Math.floor(num / 60);  
+  var minutes = num % 60;
+  return hours + ":" + minutes;         
+}
+
+
+const number = prompt('Enter a Number: ');
+
+const result = converttime(number);
+  output.innerHTML = result;
+   
+   </script>
+</body>
+</html>
