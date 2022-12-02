@@ -1,0 +1,20 @@
+<html>
+<body>
+   <h3>Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a 
+given original string. The length of the given string must be 3 and above  </h3>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+
+const str = prompt('Enter a string: ');
+  if (str.length >= 3) {
+    result_str = str.substring(str.length - 3);
+  output.innerHTML= result_str + result_str + result_str + result_str;
+  }
+  else
+    output.innerHTML= false;
+  
+   </script>
+</body>
+</html>

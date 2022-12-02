@@ -1,0 +1,32 @@
+<html>
+<body>
+   <h3> Write a JavaScript program to find the maximal difference between any two adjacent 
+elements of a given array of integers.
+ </h3>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+
+function difference_max_arr(arr) {
+	var max = 0;
+    
+	for (var i = 0; i < arr.length ;i++)
+         {
+         for(var k=0;k!=i && k<arr.length;k++)
+             {
+		var diff = Math.abs(arr[i] - arr[k]);
+		max = Math.max(max,diff);
+	  }
+        }
+	return max;
+}
+
+
+
+const result = difference_max_arr([13, 2, 3, 8, 9]);
+  output.innerHTML = result;
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+   <h3>Write a JavaScript program to extract the first half of a string of even length.  </h3>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+
+const str = prompt('Enter a string: ');
+  if (str.length % 2 == 0) {
+    result_str = str.slice(0, str.length / 2);
+  output.innerHTML= result_str;
+  }
+  else
+    output.innerHTML= str;
+  
+   </script>
+</body>
+</html>

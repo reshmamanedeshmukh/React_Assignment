@@ -1,0 +1,36 @@
+<html>
+<body>
+   <h3>Write a JavaScript program to find the number which appears most in a given array of 
+integers
+ </h3>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+
+var arr=[1, 2, 3, 2, 2, 8, 1, 9];
+
+var counts = {};
+var compare = 0;
+var mostFrequent;
+(function(arr){
+   for(var i = 0, len = arr.length; i < len; i++){
+       var word = arr[i];
+       
+       if(counts[word] === undefined){
+           counts[word] = 1;
+       }else{
+           counts[word] = counts[word] + 1;
+       }
+       if(counts[word] > compare){
+             compare = counts[word];
+             mostFrequent = arr[i];
+       }
+    }
+  return mostFrequent;
+})(arr);
+output.innerHTML = mostFrequent;
+   
+   </script>
+</body>
+</html>

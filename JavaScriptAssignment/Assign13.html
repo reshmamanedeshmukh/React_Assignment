@@ -1,0 +1,22 @@
+<html>
+<body>
+   <h3> Write a JavaScript program to create a new string without the first and last character of a 
+given string
+ </h3>
+
+ <div id="output"></div>
+   <script>
+      let output = document.getElementById("output");
+function withoutfirstandend(str) {
+  return str.substring(1, str.length - 1);
+}
+
+
+const str = prompt('Enter a String: ');
+
+const result = withoutfirstandend(str);
+  output.innerHTML = result;
+   
+   </script>
+</body>
+</html>
