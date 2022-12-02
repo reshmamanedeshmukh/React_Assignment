@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+
+
+<html>
+<body>
+
+
+<h2>Create an arrow function by which you will take input of string and you check given 
+string is palindrome or not.</h2>
+
+
+<script type="text/javascript">
+var checkPalindrome = (string) =>{
+   
+    const arrayValues = string.split('');
+
+   
+    const reverseArrayValues = arrayValues.reverse();
+
+
+    const reverseString = reverseArrayValues.join('');
+
+    if(string == reverseString) {
+        document.write('It is a palindrome');
+    }
+    else {
+        document.write('It is not a palindrome');
+    }
+}
+
+
+ const string=prompt("enter any string");
+
+ checkPalindrome(string);
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+  

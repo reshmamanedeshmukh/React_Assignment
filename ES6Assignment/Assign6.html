@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Create a class of item (itemid, itemname, itemprice, category) and create object of the 
+class and print each detail of item. With arrow functions.</h2>
+
+<script type="text/javascript">
+
+class Item {
+ constructor(itemid, itemname, itemprice, category)
+{
+this.itemid=itemid;
+this.itemname=itemname;
+this.itemprice=itemprice;
+this.category=category;
+
+this.show=()=>{
+document.write("Items Detail:" +this.itemid+" "+this.itemname+" "+this.itemprice+" "+this.category);
+}
+}
+}
+let obj=new Item(1,"abc",203,"cosmatic");
+obj.show();
+
+
+</script>
+
+</body>
+</html>
