@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Create a class of item (itemid, itemname, itemprice, category) and create object of the 
+class and print each detail of item. With arrow functions.</h2>
+
+<script type="text/javascript">
+class StringMethods {
+  constructor() {
+    
+  }
+  getRed() {
+    return this.name;
+  }
+  setRed(name) {
+    this.name = name;
+  }
+
+checkVC()
+{
+
+const word=sm.getRed();
+   const startsWithVowel = word.charAt(0);
+
+if(startsWithVowel=='a' || startsWithVowel=='e'||startsWithVowel=='i'|| startsWithVowel=='o' || startsWithVowel=='u')
+{
+  var vowel_list = 'aeiouAEIOU';
+  var consonantcount = 0;
+  
+  for(var x = 0; x < word.length ; x++)
+  {
+    if (vowel_list.indexOf(word[x]) == -1)
+    {
+      consonantcount += 1;
+    }
+  
+  }
+document.write("String start with vowles no of consonant :"+consonantcount);
+   
+
+}else{
+var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
+  
+  for(var x = 0; x < word.length ; x++)
+  {
+    if (vowel_list.indexOf(word[x]) !== -1)
+    {
+      vcount += 1;
+    }
+  
+  }
+document.write("String start with consonant no of vowels:"+vcount);
+}
+}
+}
+const sm = new StringMethods();
+sm.setRed("javascript");
+
+//sm.setRed("ajavascript");
+sm.checkVC();
+
+
+
+</script>
+
+</body>
+</html>

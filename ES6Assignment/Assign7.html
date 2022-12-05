@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Create a class of student (rollno, name, totalmarks, classname). Now you have sort the 
+student data on the basis of result using arrow function.</h2>
+
+<script type="text/javascript">
+
+
+
+class Student {
+  constructor(rollno,name,totalmarks,classname) {
+      this.rollno=rollno;
+ this.name=name;
+ this.totalmarks=totalmarks;
+ this.classname=classname;
+
+ 
+  }
+}
+var objs = [ 
+    { rollno:1,  name:'abc', totalmarks:501, classname:"first"},
+    {rollno:2,  name:'xyz', totalmarks:401, classname:"first1" },
+    { rollno:3,  name:'pqr', totalmarks:201, classname:"first2"}
+];
+
+objs.sort((x, y) => {
+     x = x.totalmarks,
+      y = y.totalmarks;
+    return x - y;
+});
+
+
+document.write("Students sorted based on ascending order of their total marks are:")
+document.write("<br>");
+
+// displaying the values
+objs.forEach((e) => {
+    document.write(` ${e.rollno} ${e.name} ${e.totalmarks} ${e.classname}`);
+document.write("<br>");
+});
+
+
+
+</script>
+</body>
+</html>
