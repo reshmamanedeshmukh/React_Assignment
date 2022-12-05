@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+    <title>Second Assignment</title></head>
+
+<style>  .tweet {
+  border: 1px solid #0099CC;
+  border-radius: 5px;
+  margin: 20px 20%;
+  padding: 20px;
+}
+
+.content,.date,.message{
+ color: red;
+  display: inline-block;
+  margin: 0 10px;
+
+}
+ </style>
+<body>
+<div id="root">
+</div>
+   
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+
+function Tweet() {
+  return (
+
+<section>
+    <div className="tweet">
+          <Avatar />  
+      <div className="content">
+
+        <App name="Abc" />  </div>
+      <div className="date">
+ <DateComponent /> </div>
+      <div className="message">
+   <Message />
+                </div>
+       </div>
+    </section>
+  );
+}
+function Avatar() {
+  return (
+    <img
+      src="https://gravatar.com/avatar/nothing"
+      alt="avatar"
+      className="avatar"
+    />
+  );
+}
+function Message() {
+  return (
+    <div className="message">This is my first tweeted message !</div>
+  );
+}
+
+
+function App(props) {
+ return (
+    <p>
+    My Name is {props.name} .
+         </p>
+  );
+}
+
+const DateComponent = () =>  <span className="date">{new Date().toDateString()}</span>;
+
+
+
+function Tweet1() {
+  return (
+
+<section>
+    <div className="tweet">
+          <Avatar1 />   
+      <div className="content">
+
+        <App1 name="Pqr" />  </div>
+      <div className="date">
+ <DateComponent1 /> </div>
+      <div className="message">
+   <Message1 />
+                </div>
+      </div>
+    </section>
+  );
+}
+function Avatar1() {
+  return (
+    <img
+      src="https://gravatar.com/avatar/nothing"
+      alt="avatar1"
+      className="avatar1"
+    />
+  );
+}
+function Message1() {
+  return (
+    <div className="message1">This is my Second tweeted message !</div>
+  );
+}
+
+
+function App1(props) {
+ return (
+    <p>
+    My Name is {props.name} .
+         </p>
+  );
+}
+
+const DateComponent1 = () =>  <span className="date">{new Date().toDateString()}</span>;
+
+
+
+
+
+
+
+function Tweet2() {
+  return (
+
+<section>
+    <div className="tweet">
+          <Avatar2 />   
+      <div className="content">
+
+        <App2 name="Xyz" />  </div>
+      <div className="date">
+ <DateComponent2 /> </div>
+      <div className="message">
+   <Message2 />
+                </div>
+      </div>
+    </section>
+  );
+}
+function Avatar2() {
+  return (
+    <img
+      src="https://gravatar.com/avatar/nothing"
+      alt="avatar2"
+      className="avatar2"
+    />
+  );
+}
+function Message2() {
+  return (
+    <div className="message2">This is my third tweeted message !</div>
+  );
+}
+
+
+function App2(props) {
+ return (
+    <p>
+    My Name is {props.name} .
+         </p>
+  );
+}
+
+const DateComponent2 = () =>  <span className="date">{new Date().toDateString()}</span>;
+
+ReactDOM.render(<section>
+         <div> <Tweet /> </div>
+     <div> <Tweet1 /> </div>
+  <div> <Tweet2 /> </div>
+ </section>,document.getElementById('root'))
+
+</script>
+</body>
+</html>

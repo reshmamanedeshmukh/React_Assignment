@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+    <title>Hello React!</title></head>
+<body>
+<div id="root">
+</div>
+   
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+
+
+
+function App() {
+  return (
+
+<section>
+    <div className="person">
+          <Person age={38} name="javascript" hobbies={["reading", "watchingtv", "eating vegetables"]} />
+<Person age={18} name="react" hobbies={["playing","gardening"]} />
+<Person age={10} name="springboot" hobbies={["swiming", "painting"]} />
+        </div>
+        
+      
+    </section>
+  );
+}
+
+/*function Person(props) {
+ const vote = props.age;
+ return (
+<div>
+    <h3>Hello</h3>
+    {vote >=18 &&
+  <h2> you can vote </h2>
+}
+{vote <18 &&
+    <h2> you can not vote</h2>} 
+</div>
+  );
+}*/
+
+
+function Person(props) {
+ const vote = props.age;
+const name=props.name;
+const hobbies=props.hobbies;
+
+ return (
+<div>
+     <p>Learn some information about this person:</p>
+
+<ul>
+<li> Name:{name.slice(0,6)} </li>
+<li> Age :{props.age} </li>
+<ul>
+          Hobbies: {hobbies.map(hobby => <li> {hobby} </li>) }
+        </ul>  
+</ul>
+   
+{  vote>=18 ? <h3> you can vote </h3> :<h3> you can not vote</h3>
+}
+
+ 
+   
+
+
+    
+</div>
+  );
+}
+ ReactDOM.render(<section>
+         <div> <App /> </div>
+     
+ </section>,document.getElementById('root'))
+
+
+</script>
+</body>
+</html>
